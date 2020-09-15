@@ -1,0 +1,17 @@
+@import "theme.scss";
+
+.search {
+  // background-image: url("./assets/ic_Search.png");
+  width: 100%;
+  
+  &__input {
+    background-color: white;
+    color: $gray-light;
+    font-size: 1.125em;
+    padding: 5px;
+  }
+
+  &__btn {
+  
+  }
+}

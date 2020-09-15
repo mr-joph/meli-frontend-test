@@ -5,7 +5,10 @@
       "~/components/*": [
         "src/components/*"
       ],
-      "~/api": [
+      "~/containers/*": [
+        "src/containers/*"
+      ],
+      "~/api/*": [
         "src/api/*"
       ],
       "~/styles": [

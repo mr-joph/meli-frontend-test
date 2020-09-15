@@ -1,0 +1,38 @@
+@import "theme.scss";
+
+.flex {
+  display: flex;
+
+  &--column {
+    flex-direction: column;
+  }
+
+  &--row {
+    flex-direction: row;
+  }
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--left {
+    justify-content: left;
+  }
+
+  &--right {
+    justify-items: right;
+  }
+
+  &--top {
+    align-items: flex-start;
+  }
+
+  &--middle {
+    align-items: center;
+  }
+
+  &--bottom {
+    align-items: flex-end;
+  }
+
+}

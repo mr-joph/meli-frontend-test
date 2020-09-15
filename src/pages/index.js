@@ -1,11 +1,9 @@
-import Logo from "~/components/logo";
-import Search from '~/components/search';
+import Topbar from "~/containers/topbar";
 
 const Index = () => (
   <div>
-    <p>Hello!</p>
-    <Logo />
-    <Search />
+    <Topbar />
+    <div>Hello</div>
   </div>
 );
 

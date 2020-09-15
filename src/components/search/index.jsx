@@ -1,11 +1,12 @@
-import styles from "./styles.module.scss";
+import styles from "./search.module.scss";
 
-// const icon = require("./assets/ic_Search.png");
+import icon from "url-loader!./assets/ic_Search.png";
+import icon2x from "url-loader!./assets/ic_Search@2x.png";
 
 const Search = (props) => (
   <div className={styles.search}>
     <input className={styles.input}/>
-    <img src="" />
+    <img src={icon} />
   </div>
 );
 
