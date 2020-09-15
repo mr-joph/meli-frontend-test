@@ -1,0 +1,26 @@
+# next.js build output
+.next/
+out/
+dist/
+build/
+bundle/
+
+# dotenv environment variables file
+.env
+
+# Dependency directories
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.*.sw[op]
+.Spotlight-V100
+.Trashes
+Thumbs.db

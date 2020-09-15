@@ -1,0 +1,16 @@
+@import "./theme.scss";
+
+@font-face {
+  font-family: $font-regular;
+  src: url("./fonts/proxima-nova-Regular.otf");
+}
+
+@font-face {
+  font-family: $font-light;
+  src: url("./fonts/proxima-nova-light.otf");
+}
+
+@font-face {
+  font-family: $font-bold;
+  src: url("./fonts/proxima-nova-semibold.otf");
+}
