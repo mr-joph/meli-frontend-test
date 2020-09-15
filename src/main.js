@@ -1,5 +1,6 @@
 const express = require("express");
 const next = require("next");
+const api = require("./api");
 const config = require("./config");
 const middlewares = require("./middlewares");
 
@@ -13,14 +14,15 @@ nextBuild
   const handle = nextBuild.getRequestHandler();
 
   middlewares(server);
+  api(server);
 
-  server.get("/api", (req, res) => {
-    return res.json({ value: "test" });
-  });
+  // server.get("/api", (req, res) => {
+  //   return res.json({ value: "test" });
+  // });
 
-  server.get("/api/items", (req, res) => {
-    return res.json({ value: "other test" });
-  });
+  // server.get("/api/items", (req, res) => {
+  //   return res.json({ value: "other test" });
+  // });
 
   server.get("*", (req, res) => {
     return handle(req, res);
