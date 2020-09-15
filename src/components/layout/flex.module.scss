@@ -2,6 +2,7 @@
 
 .flex {
   display: flex;
+  height: inherit;
 
   &--column {
     flex-direction: column;
@@ -20,7 +21,15 @@
   }
 
   &--right {
-    justify-items: right;
+    justify-content: right;
+  }
+
+  &--space-between {
+    justify-content: space-between;
+  }
+
+  &--space-around {
+    justify-content: space-around;
   }
 
   &--top {

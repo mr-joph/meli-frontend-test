@@ -1,6 +1,7 @@
 @import "theme.scss";
 
 .layout {
+  height: inherit;
   margin: 0 auto;
-  width: 1024px;
+  max-width: 1024px;
 }

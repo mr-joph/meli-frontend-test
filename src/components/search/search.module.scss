@@ -2,16 +2,34 @@
 
 .search {
   // background-image: url("./assets/ic_Search.png");
+  display: flex;
   width: 100%;
-  
+
   &__input {
     background-color: white;
-    color: $gray-light;
+    border: none;
+    border-radius: 2px 0 0 2px;
+    color: $dark-color;
     font-size: 1.125em;
-    padding: 5px;
+    padding: 9px;
+    width: inherit;
+
+    &::placeholder {
+      color: $light-color;
+    }
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
   }
 
   &__btn {
-  
+    align-items: center;
+    background-color: $light-color;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    width: 40px;
   }
 }

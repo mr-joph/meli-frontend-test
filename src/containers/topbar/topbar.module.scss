@@ -2,15 +2,15 @@
 
 .topbar {
   background-color: $primary-color;
-  height: 50px;
+  height: 60px;
   // padding: 5px 0;
 
   &__logoWrapper {
-
+    margin-right: 30px;
   }
 
   &__searchWrapper {
-
+    width: 90%;
   }
 }
 

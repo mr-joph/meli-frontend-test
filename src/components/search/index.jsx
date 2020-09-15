@@ -5,8 +5,8 @@ import icon2x from "url-loader!./assets/ic_Search@2x.png";
 
 const Search = (props) => (
   <div className={styles.search}>
-    <input className={styles.input}/>
-    <img src={icon} />
+    <input className={styles.search__input} placeholder="Nunca dejes de buscar"/>
+    <div className={styles.search__btn}><img src={icon} /></div>
   </div>
 );
 
