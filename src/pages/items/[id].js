@@ -1,11 +1,10 @@
-import Logo from "~/components/logo";
-import Search from '~/components/search';
+import Topbar from "~/containers/topbar";
+import ProductDetail from "~/containers/product-detail";
 
 const ProductPage = () => (
   <div>
-    <p>Item page</p>
-    <Logo />
-    <Search />
+    <Topbar />
+    <ProductDetail />
   </div>
 );
 

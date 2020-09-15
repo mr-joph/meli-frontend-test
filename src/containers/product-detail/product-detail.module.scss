@@ -1,0 +1,52 @@
+@import "theme.scss";
+
+.productDetail {
+  &__breadcrumb {
+    color: $gray-dark;
+    font-size: 0.875rem;
+    margin: 16px 0;
+  }
+
+  &__content {
+    background-color: white;
+    padding: 32px;
+
+    &__main {
+      width: 70%;
+
+      &__desc {
+        &__title {
+          font-size: 1.75rem;
+        }
+
+        &__paragraph {
+          color: $gray-dark;
+        }
+      }
+    }
+
+    &__details {
+      width: 30%;
+
+      &__amount {
+        font-family: $font-light;
+        font-size: 0.875rem;
+      }
+
+      &__name {
+        font-family: $font-bold;
+        font-size: 1.5rem;
+      }
+
+      &__price {
+        font-family: $font-light;
+        font-size: 2.875rem;
+
+        & span {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+}
