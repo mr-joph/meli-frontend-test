@@ -3,6 +3,7 @@ const next = require("next");
 const config = require("./config");
 const middlewares = require("./middlewares");
 
+const serverPort = config.server.port;
 const nextBuild = next(config.next);
 
 nextBuild
@@ -25,10 +26,10 @@ nextBuild
     return handle(req, res);
   });
 
-  server.listen(1234, err => {
+  server.listen(serverPort, err => {
     if(err) throw err;
 
-    console.info("Server running...");
+    console.info(`Server running on port ${serverPort}`);
   });
 
 })
