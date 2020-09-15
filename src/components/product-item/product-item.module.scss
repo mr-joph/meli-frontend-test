@@ -1,0 +1,42 @@
+@import "theme.scss";
+
+.productItem {
+  background-color: white;
+  border-bottom: 1px solid $light-color;
+  padding: 20px;
+
+  &__detail {
+    &__pic {
+      & img {
+        background-color: $gray-light;
+        border-radius: 4px;
+        height: 180px;
+        overflow: hidden;
+        width: 180px;
+      }
+    }
+
+    &__info {
+      margin-top: 25px;
+      margin-left: 16px;
+
+      &__price {
+        font-family: $font-light;
+        font-size: 1.5em;
+        margin-bottom: 18px;
+      }
+
+      &__desc {
+        font-size: 1.125em;
+        max-width: 400px;
+      }
+    }
+  }
+
+  &__place {
+    color: $gray-dark;
+    font-family: $font-light;
+    font-size: 0.75em;
+    margin: 30px;
+  }
+}

@@ -4,7 +4,9 @@ import styles from "./layout.module.scss";
 import Row from "./row";
 
 const Layout = (props) => (
-  <div className={styles.layout}>
+  <div 
+   className={`${styles.layout} ${props.className ? props.className : ''}`}
+  >
     {
       (props.dir === "row")
       ? <Row {...props} />

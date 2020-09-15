@@ -1,11 +1,10 @@
-import Logo from "~/components/logo";
-import Search from '~/components/search';
+import Topbar from "~/containers/topbar";
+import ListResult from "~/containers/list-result";
 
 const Items = () => (
   <div>
-    <p>Search result</p>
-    <Logo />
-    <Search />
+    <Topbar />
+    <ListResult />
   </div>
 );
 
