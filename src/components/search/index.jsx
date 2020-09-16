@@ -14,7 +14,6 @@ const Search = ({onSubmit, value}) => {
   })
   const onChange = useCallback((event) => {
     const input = event.target.value;
-    console.log("test: ", input);
     setQuery(input);
   });
   const onKeyPress = useCallback((event) => {
