@@ -15,7 +15,11 @@ module.exports = {
     try {
       const response = await fetch(url);
       const data = await response.json();
-    
+      
+      if (data.error) {
+        return Promise.reject(data);
+      }
+
       return parser.searchResult(data);
     } catch(err) {
       console.error(err);
@@ -36,6 +40,10 @@ module.exports = {
     try {
       const responses = await Promise.all([fetch(itemUrl), fetch(descURL)]);
       const [details, desc] = await Promise.all(responses.map(res => res.json()));
+
+      if(details.error) {
+        return Promise.reject(details);
+      }
 
       return parser.productResult(details, desc);
     } catch(err) {

@@ -11,7 +11,7 @@ const ListResult = (props) => {
       {
         props.items.length
           ? props.items.map(({item}, id) => <ProductItem key={id} {...item} />)
-          : <EmptyResult>No Results ¯\_(ツ)_/¯</EmptyResult>
+          : <EmptyResult>Sin Resultados ¯\_(ツ)_/¯</EmptyResult>
       }
     </Layout>
   );

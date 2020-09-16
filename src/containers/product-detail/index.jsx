@@ -6,7 +6,7 @@ import styles from "./product-detail.module.scss";
 
 /** Wrapper for Products info */
 const ProductDetail = (props) => {
-  const {amount, decimal = 0} = props.price;
+  const {amount, decimal = 0} = props.price || {};
   return (
     <Layout className={styles.productDetail}>
       <Column className={styles.productDetail__breadcrumb}>

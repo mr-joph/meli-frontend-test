@@ -1,14 +1,21 @@
+import EmptyResult from "~/components/empty-result";
 import Topbar from "~/containers/topbar";
 import ProductDetail from "~/containers/product-detail";
 import { getOriginURL } from "~/utils";
 
 /** Page = "/items/:id" */
-const ProductPage = (props) => (
+const ProductPage = (props) => {
+  return (
   <div>
     <Topbar />
-    <ProductDetail {...props.data.item}/>
+    { 
+      props.data.error
+        ? <EmptyResult>404</EmptyResult>
+        : <ProductDetail {...props.data.item} />
+    }
   </div>
 );
+}
 
 export async function getServerSideProps({ params }) {
   let result = {};
