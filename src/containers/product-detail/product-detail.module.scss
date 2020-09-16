@@ -9,6 +9,7 @@
 
   &__content {
     background-color: white;
+    margin-bottom: 32px;
     padding: 32px;
 
     &__main {
@@ -30,6 +31,7 @@
         &__paragraph {
           color: $gray-dark;
           margin-bottom: 32px;
+          white-space: pre-line;
         }
       }
     }
