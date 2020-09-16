@@ -1,7 +1,7 @@
 function productResult(productData, desc) {
   const picture = productData.pictures && productData.pictures.length 
     ? productData.pictures[0].url
-    : "";
+    : (productData.thumbnail ? productData.thumbnail : "");
   
   return {
     author: desc ? { name: "", lastname: "" } : undefined,
