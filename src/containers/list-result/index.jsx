@@ -5,7 +5,6 @@ import ProductItem from "~/components/product-item";
 import styles from "./list-result.module.scss";
 
 const ListResult = (props) => {
-  console.log("ITEMS: ", props.items);
   return (
     <Layout className={styles.listResult}>
       {

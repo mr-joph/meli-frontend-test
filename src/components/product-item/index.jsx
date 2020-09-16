@@ -1,12 +1,15 @@
 import PropTypes from "prop-types";
+import { formatDecimal } from "~/utils";
 import { Row, Column } from "../layout";
 import styles from "./product-item.module.scss";
 
 const ProductItem = (props) => {
-  console.log("ITEM:",props);
+  const productUrl = `/items/${props.id}`;
+
   return (
     <Row className={styles.productItem} justify="space-between">
 
+      <a href={productUrl}>
       <Row className={styles.productItem__detail}>
         <Column className={styles.productItem__detail__pic}>
           <img src={props.picture} />
@@ -14,7 +17,7 @@ const ProductItem = (props) => {
         <Column className={styles.productItem__detail__info}>
 
           <div className={styles.productItem__detail__info__price}>
-            $ {props.price ? props.price.amount : 0}
+            $ {props.price ? formatDecimal(props.price.amount) : 0}
           </div>
 
           <div className={styles.productItem__detail__info__desc}>
@@ -23,6 +26,7 @@ const ProductItem = (props) => {
 
         </Column>
       </Row>
+      </a>
       
       <Column className={styles.productItem__place}>
         Capital Federal
@@ -33,9 +37,10 @@ const ProductItem = (props) => {
 }
 
 ProductItem.propTypes = {
+  id: PropTypes.string,
   picture: PropTypes.string,
   title: PropTypes.string,
-  price: PropTypes.objectOf({amount: PropTypes.number}),
+  price: PropTypes.object,
   free_shipping: PropTypes.bool,
 };
 
