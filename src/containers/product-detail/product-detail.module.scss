@@ -14,6 +14,13 @@
     &__main {
       width: 70%;
 
+      &__image {
+        & img {
+          margin: 0 auto;
+          width: fit-content;
+        }
+      }
+
       &__desc {
         &__title {
           font-size: 1.75rem;
