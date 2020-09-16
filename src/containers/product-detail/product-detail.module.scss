@@ -17,10 +17,12 @@
       &__desc {
         &__title {
           font-size: 1.75rem;
+          margin-bottom: 32px;
         }
 
         &__paragraph {
           color: $gray-dark;
+          margin-bottom: 32px;
         }
       }
     }
@@ -31,19 +33,24 @@
       &__amount {
         font-family: $font-light;
         font-size: 0.875rem;
+        margin-top: 32px;
+        margin-bottom: 16px;
       }
 
       &__name {
         font-family: $font-bold;
         font-size: 1.5rem;
+        max-width: 250px;
       }
 
       &__price {
         font-family: $font-light;
         font-size: 2.875rem;
+        margin: 32px 0;
 
         & span {
           font-size: 1rem;
+          vertical-align: text-top;
         }
       }
     }

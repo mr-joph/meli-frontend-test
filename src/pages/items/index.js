@@ -1,4 +1,3 @@
-import Layout, {Row} from "~/components/layout";
 import Topbar from "~/containers/topbar";
 import ListResult from "~/containers/list-result";
 import { getOriginURL } from "~/utils";
