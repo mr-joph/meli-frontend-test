@@ -1,3 +1,11 @@
+
+/**
+ * 
+ * @param {Object} productData - product data 
+ * @param {Object?} desc - optional external API info with product description
+ * 
+ * @return simplify product data version 
+ */
 function productResult(productData, desc) {
   const picture = productData.pictures && productData.pictures.length 
     ? productData.pictures[0].url
@@ -22,6 +30,12 @@ function productResult(productData, desc) {
   }
 }
 
+/**
+ *
+ * @param {Object} searchData - product data
+ *
+ * @return simplify search result data
+ */
 function searchResult(searchData) {
   const categories = [];
   const items = searchData.results.slice(0, 4).map((item) => {
@@ -30,7 +44,6 @@ function searchResult(searchData) {
     if(!categories.includes(category)) {
       categories.push(category);
     }    
-
 
     return productResult(item);
   });

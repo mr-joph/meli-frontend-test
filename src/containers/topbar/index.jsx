@@ -6,6 +6,7 @@ import Logo from "~/components/logo";
 import Search from "~/components/search";
 import styles from "./topbar.module.scss";
 
+/** Header with the search included */
 const TopBar = (props) => {
   const router = useRouter();
   const onSearch = useCallback((query) => {

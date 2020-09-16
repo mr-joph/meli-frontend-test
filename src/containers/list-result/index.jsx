@@ -4,6 +4,7 @@ import Layout from "~/components/layout";
 import ProductItem from "~/components/product-item";
 import styles from "./list-result.module.scss";
 
+/** Display search result products */
 const ListResult = (props) => {
   return (
     <Layout className={styles.listResult}>
@@ -17,7 +18,7 @@ const ListResult = (props) => {
 }
 
 ListResult.propTypes = {
-  items: PropTypes.array,//.arrayOf(ProductItem.propTypes),
+  items: PropTypes.array,
 };
 
 export default ListResult;

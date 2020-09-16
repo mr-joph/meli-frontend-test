@@ -2,6 +2,7 @@ import Topbar from "~/containers/topbar";
 import ListResult from "~/containers/list-result";
 import { getOriginURL } from "~/utils";
 
+/** page = "/items", "/items?search=query" */
 const Items = (props) => {
   const data = props.data || {};
 
@@ -12,7 +13,6 @@ const Items = (props) => {
     </div>
   );
 };
-
 
 export async function getServerSideProps({ query }) {
   let result = {};

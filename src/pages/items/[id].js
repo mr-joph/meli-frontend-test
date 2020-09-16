@@ -2,16 +2,13 @@ import Topbar from "~/containers/topbar";
 import ProductDetail from "~/containers/product-detail";
 import { getOriginURL } from "~/utils";
 
-const ProductPage = (props) => {
-  console.log("DETAILS:", props.data);
-
-  return (
-    <div>
-      <Topbar />
-      <ProductDetail {...props.data.item}/>
-    </div>
-  );
-}
+/** Page = "/items/:id" */
+const ProductPage = (props) => (
+  <div>
+    <Topbar />
+    <ProductDetail {...props.data.item}/>
+  </div>
+);
 
 export async function getServerSideProps({ params }) {
   let result = {};

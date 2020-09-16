@@ -3,6 +3,7 @@ const services = require("../services");
 
 const router = express.Router();
 
+// url = "/api/items", "/api/items?q=query"
 router.get("/items", async function(req, res) {
   try {
     const { query } = req;
@@ -14,6 +15,7 @@ router.get("/items", async function(req, res) {
   }
 });
 
+// url = "/api/items"
 router.get("/items/:id", async function(req, res) {
   try {
     const { params } = req;

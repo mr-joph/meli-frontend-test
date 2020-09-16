@@ -1,9 +1,15 @@
 const fetch = require("isomorphic-fetch");
+const config = require("../config");
 const parser = require("./parser");
 
-const SERVICE_BASE_URL = "https://api.mercadolibre.com";
+const SERVICE_BASE_URL = config.server.EXTERNAL_API;
 
 module.exports = {
+  /**
+   * @param {String} searchValue - query value
+   * 
+   * @return Promise
+   */
   async search(searchValue = "") {
     const url = `${SERVICE_BASE_URL}/sites/MLA/search?q=${searchValue}`;
     try {
@@ -18,6 +24,11 @@ module.exports = {
     }
   },
 
+  /**
+  * @param {String} productId
+  *
+  * @return Promise
+  */
   async getProductDetail(productId) {
     const itemUrl = `${SERVICE_BASE_URL}/items/${productId}`;
     const descURL = `${SERVICE_BASE_URL}/items/${productId}/description`;

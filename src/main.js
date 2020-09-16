@@ -4,9 +4,11 @@ const api = require("./api");
 const config = require("./config");
 const middlewares = require("./middlewares");
 
-const serverPort = config.server.port;
+const serverPort = config.server.PORT;
 const nextBuild = next(config.next);
 
+/** entrypoint to run the whole application */
+/** Ready, steady, go!! */
 nextBuild
 .prepare()
 .then(() => {
@@ -15,14 +17,6 @@ nextBuild
 
   middlewares(server);
   api(server);
-
-  // server.get("/api", (req, res) => {
-  //   return res.json({ value: "test" });
-  // });
-
-  // server.get("/api/items", (req, res) => {
-  //   return res.json({ value: "other test" });
-  // });
 
   server.get("*", (req, res) => {
     return handle(req, res);
@@ -36,6 +30,6 @@ nextBuild
 
 })
 .catch(err => {
-  console.error(err);
+  console.error("Error Starting the server:\n", err);
   process.exit(1);
 });

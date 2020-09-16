@@ -31,6 +31,7 @@ const Search = ({onSubmit, value}) => {
         placeholder="Nunca dejes de buscar"
         onChange={onChange}
         onKeyPress={onKeyPress}
+        value={query}
       />
       <div className={styles.search__btn} onClick={onSearch}>
         <img src={icon} />

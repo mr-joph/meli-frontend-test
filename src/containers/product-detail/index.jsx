@@ -4,12 +4,13 @@ import Button from "~/components/button";
 import { formatDecimal } from "~/utils";
 import styles from "./product-detail.module.scss";
 
-const ListResult = (props) => {
+/** Wrapper for Products info */
+const ProductDetail = (props) => {
   const {amount, decimal = 0} = props.price;
   return (
     <Layout className={styles.productDetail}>
       <Column className={styles.productDetail__breadcrumb}>
-        Electronica, Audio y Video > iPod > Reproductores > iPod Touch > 32GB
+        {/* Electronica, Audio y Video > iPod > Reproductores > iPod Touch > 32GB */}
       </Column>
 
       <Row className={styles.productDetail__content}>
@@ -29,7 +30,9 @@ const ListResult = (props) => {
         
         <Column className={styles.productDetail__content__details}>
           <div className={styles.productDetail__content__details__amount}>
-            { props.condition ? "Nuevo" : "Usado"} - {props.sold_quantity} vendidos
+            { props.condition ? "Nuevo" : "Usado"} - {
+              props.sold_quantity} {props.sold_quantity === 1 ? "vendido" : "vendidos"
+            }
           </div>
           <div className={styles.productDetail__content__details__name}>
             {props.title}
@@ -50,7 +53,7 @@ const ListResult = (props) => {
   );
 }
 
-ListResult.propTypes = {
+ProductDetail.propTypes = {
   picture: PropTypes.string,
   description: PropTypes.string,
   title: PropTypes.string,
@@ -60,4 +63,4 @@ ListResult.propTypes = {
 
 
 
-export default ListResult;
+export default ProductDetail;
